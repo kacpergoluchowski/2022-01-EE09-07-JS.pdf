@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Galeria </title>
+        <link rel = "stylesheet" href = "styl7.css"/>
+        <script>
+            x=0;
+            function iconOff()
+            {
+                if(x==0)
+                {
+                    let png = document.getElementById('serce').src = 'icon-on.png';
+                    x = 1
+                }
+                else if(x==1)
+                {
+                    let png = document.getElementById('serce').src = 'icon-off.png';
+                    x = 0;
+                }
+            }
+
+            function zmien(change){
+                switch(change)
+                {
+                    case 'lanzarotte':
+                        document.getElementById('imgGlowny').src = 'lanzarotte.jpg'
+                        break;
+                    case 'pekin':
+                        document.getElementById('imgGlowny').src = 'pekin.jpg'
+                        break;
+                    case 'serengeti':
+                        document.getElementById('imgGlowny').src = 'serengeti.jpg'
+                        break;
+                    case 'wenecja':
+                        document.getElementById('imgGlowny').src = 'wenecja.jpg'
+                        break;
+                    case 'tajlandia':
+                        document.getElementById('imgGlowny').src = 'tajlandia.jpg'
+                        break;
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="baner">
+            <h2> Galeria ciekawych miejsc </h2>
+        </div>
+
+        <div id="glowny">
+            <img src = "img/lanzarotte.jpg" alt = "galeria" id = 'imgGlowny'/>
+        </div>
+
+        <div id="lewy">
+            <h3> Przeglądaj zdjęcia </h3> 
+            <img src="lanzarotte.jpg" alt="lanzarotte" id="z1" onclick="zmien(document.getElementById('z1').alt)">
+            <img src="pekin.jpg" alt="pekin" id="z2" onclick="zmien(document.getElementById('z2').alt)">
+            <img src="serengeti.jpg" alt="serengeti" id="z3" onclick="zmien(document.getElementById('z3').alt)">
+            <img src="wenecja.jpg" alt="wenecja" id="z4" onclick="zmien(document.getElementById('z4').alt)">
+            <img src="tajlandia.jpg" alt="tajlandia" id="z5" onclick="zmien(document.getElementById('z5').alt)">
+        </div>
+
+        <div id="prawy">
+            <h3> Obrazy w naszej galerii </h3>
+            <table>
+                <tr>
+                    <td> Europa </td>  <td> Azja </td> <td> Afryka </td>
+                </tr>
+                <tr>
+                    <td> 2 </td>  <td> 2 </td> <td> 1 </td>
+                </tr>
+            </table>
+
+            <p> Polub nas <img src = "img/icon-off.png" id = "serce" onclick = "iconOff()"/></p> 
+            <a href = "https://pixabay.com" target="_blank"> Odkryj więcej zdjęć </a>
+        </div>
+
+
+        <div id="stopka">
+            Autor: Kacper Gołuchowski
+        </div>
+    </body>
+</html>
