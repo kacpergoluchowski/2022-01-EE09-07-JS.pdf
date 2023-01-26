@@ -1,0 +1,85 @@
+
+
+body {
+    font-family:  Garamond;
+    margin: 0;
+
+}
+
+h1 {
+    display: inline;
+}
+
+h2 {
+    display: inline-block;
+}
+
+#left {
+    float: left;
+    width: 25%;
+}
+
+#right {
+    float: left;
+    width: 75%;
+}
+
+#topLeft {
+    height: 500px;
+    min-width: 25%;
+    background-color: lavender;
+}
+
+#downLeft {
+    height: 300px;
+    min-width: 25%;
+    background-color: lavender;
+}
+
+#topRight {
+    height: 150px;
+    min-width: 75%;
+    background-color: indigo;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+}
+
+#downRight {
+    height: 650px;
+    min-width: 75%;
+    background-color: lavender;
+    font-size: 200%;
+    text-align: center;
+}
+
+#footer {
+    background-color: indigo;
+    color: white;
+    text-align: right;
+    clear: both;
+}
+
+ul li {
+    list-style-type: square;
+}
+
+ol li {
+    list-style-type: number;
+}
+
+img {
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+#kosmetyczka 
+{
+    margin-top: -100px;
+}
+
+img:hover {
+    padding: 4px;
+    border: solid 1px indigo;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Usługi kosmetyczne </title>
+    <link rel = "stylesheet" href = "styl.css">
+    <script>
+        function zabiegi()
+        {
+            let wynik = document.getElementById("wynikFunkcji");
+
+            if(document.getElementById("piling").checked==true)
+            {
+                var a = 45;
+            }
+            else
+            {
+                var a = 0;
+            }
+            if(document.getElementById("maska").checked==true)
+            {
+                var b = 30;
+            }
+            else
+            {
+                var b = 0;
+            }
+            if(document.getElementById("masaz_twarzy").checked==true)
+            {
+                var c = 20;
+            }
+            else
+            {
+                var c = 0;
+            }
+            if(document.getElementById("regulacja_brwi").checked==true)
+            {
+                var d = 5;
+            }
+            else
+            {
+                var d = 0;
+            }
+            let cena = a+b+c+d;
+
+            wynik.innerHTML = "Cena zabiegów: " + cena;
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <div id="left">
+        <div id="topLeft">
+            <h2> W ofercie </h2>
+            <ul>
+                <a href="twarz.html">
+                    <li> Zabiegi na twarz </li>
+                </a>
+                <ol>
+                    <li> Piling </li>
+                    <li> Maska </li>
+                    <li> Regulacja brwi </li>
+                </ol>
+                <li> Masaż </li>
+                <li> Zabiegi oczyszające </li>
+            </ul>
+            <a href="index.html"> Do strony głównej </a>
+        </div>
+        <div id="downLeft">
+            <img src="obraz1.jpg" alt="kosmetyczka" id = "kosmetyczka">
+        </div>
+
+    </div>
+
+    <div id="right">
+        <div id="topRight">
+            <h1> Salon kosmetyczny </h1>
+        </div>
+        <div id="downRight">
+           <h2> Sprawdz cene swojej wizyty </h2>
+           <form> 
+                <input type = "checkbox" id = "piling"> 
+                <label for = "piling"> Piling </label> <br>
+                <input type = "checkbox" id = "maska"> 
+                <label for = "piling"> Maska </label> <br>
+                <input type = "checkbox" id = "masaz_twarzy"> 
+                <label for = "piling"> Masaż twarzy </label> <br>
+                <input type = "checkbox" id = "regulacja_brwi"> 
+                <label for = "piling"> Regulacja brwi </label> <br> <br>
+                <input type = "button" value = "sprawdz cene" onclick = "zabiegi()">
+           </form>
+           <p id = "wynikFunkcji"> </p> 
+        </div>
+    </div>
+
+    <div id="footer">
+        <p> Autor: Kacper Gołuchowski </p>
+    </div>
+</body>
+
+</html>
